@@ -1,0 +1,50 @@
+.page-header {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.page-header__logo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0 22px 0;
+}
+
+.page-header__link-img {
+  width: 33px;
+  height: 37px;
+}
+
+.page-header__link-text {
+  width: 101px;
+  height: 18px;
+}
+
+.page-header__btn {
+  border: none;
+  background-color: inherit;
+  position: relative;
+  width: 25px;
+  height: 25px;
+
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    background-color: black;
+    width: 25px;
+    height: 1px;
+    top: 50%;
+    left: 0;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
