@@ -1,0 +1,63 @@
+.how-works {
+  margin-bottom: 40px;
+}
+
+.how-works__title {
+  font-size: 36px;
+  line-height: 40px;
+  margin: 0;
+  margin-bottom: 38px;
+}
+
+.how-works__item {
+  position: relative;
+
+  font-family: "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  color: @special_dark-grey;
+
+  margin: 0;
+  margin-bottom: 10%;
+  padding-left: 78px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+
+    background-color: @basic-green;
+    width: 60px;
+    height: 60px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: 15px;
+    top: 15px;
+    background-repeat: no-repeat;
+  }
+
+  &--useful::after {
+    background-image: url("../../img/how-works/userful.svg");
+  }
+
+  &--powder::after {
+    background-image: url("../../img/how-works/powder.svg");
+  }
+
+  &--functional::after {
+    background-image: url("../../img/how-works/functional.svg");
+  }
+
+  &--time::after {
+    background-image: url("../../img/how-works/time.svg");
+  }
+}
+
+.how-works__description {
+  margin: 0;
+}
