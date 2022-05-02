@@ -1,5 +1,6 @@
 .example {
   background-color: @basic-grey;
+  padding-bottom: 1px;
 }
 
 .example__title {
@@ -15,5 +16,59 @@
   font-size: 14px;
   line-height: 18px;
   margin: 0;
+  margin-bottom: 40px;
   color: @special_dark-grey;
+}
+
+.example__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 32px;
+  margin-bottom: 26px;
+}
+
+.example__item {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  text-align: center;
+  border: 1px solid @color-border;
+  border-radius: 5px;
+  padding: 0;
+  transform: rotate(180deg);
+}
+
+.example__bolding {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 24px;
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 15px;
+  margin-top: 10px;
+  transform: rotate(180deg);
+}
+
+.example__legend {
+  font-family: "Arial", sans-serif;
+  color: @special_dark-grey;
+  font-size: 12px;
+  line-height: 12px;
+  padding: 0 15px;
+  transform: rotate(180deg);
+}
+
+.example__expenses {
+  text-align: center;
+  margin: 0;
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+  margin-bottom: 42px;
+}
+
+.example__image {
+  margin: 0;
+  margin-bottom: 23px;
+  text-align: center;
 }
