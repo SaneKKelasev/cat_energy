@@ -1,14 +1,28 @@
+.our-location {
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    margin-bottom: 60px;
+  }
+}
+
 .our-location__addres {
   display: grid;
   grid-template-columns: 1fr 1fr;
   padding-top: 28px;
   padding-bottom: 26px;
+  gap: 10px;
 }
 
 .our-location__call {
   line-height: 24px;
   text-transform: uppercase;
   margin: 0;
+
+  @media (min-width: @tablet-width) {
+    width: 171px;
+    font-size: 20px;
+    line-height: 21px;
+  }
 }
 
 .our-location__adress {
@@ -17,5 +31,19 @@
   line-height: 20px;
   color: @special_dark-grey;
   font-style: normal;
-  grid-column: 2 / 3;
+
+  @media (min-width: @tablet-width) {
+    margin-left: auto;
+    font-style: 16px;
+    line-height: 20px;
+    text-align: right;
+    width: 159px;
+  }
+}
+
+.our-location__city {
+  @media (min-width: @tablet-width) {
+    display: inline-block;
+    margin-top: 20px;
+  }
 }

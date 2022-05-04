@@ -1,6 +1,10 @@
 .example {
   background-color: @basic-grey;
   padding-bottom: 1px;
+
+  @media (min-width: @tablet-width) {
+    background-color: inherit;
+  }
 }
 
 .example__title {
@@ -9,6 +13,13 @@
   line-height: 40px;
   padding: 27px 0 33px 0;
   margin: 0;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 63px;
+  }
 }
 
 .example__description {
@@ -18,6 +29,13 @@
   margin: 0;
   margin-bottom: 40px;
   color: @special_dark-grey;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+    word-spacing: 3px;
+    margin-bottom: 54px;
+  }
 }
 
 .example__list {
@@ -25,6 +43,12 @@
   grid-template-columns: 1fr 1fr;
   column-gap: 32px;
   margin-bottom: 26px;
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: 1fr 1fr 2fr;
+    align-items: center;
+    margin-bottom: 59px;
+  }
 }
 
 .example__item {
@@ -36,6 +60,7 @@
   border-radius: 5px;
   padding: 0;
   transform: rotate(180deg);
+  margin-bottom: 26px;
 }
 
 .example__bolding {
@@ -59,16 +84,43 @@
 }
 
 .example__expenses {
+  grid-column-start: 1;
+  grid-column-end: -1;
   text-align: center;
   margin: 0;
   font-size: 14px;
   line-height: 20px;
   text-transform: uppercase;
   margin-bottom: 42px;
+
+  @media (min-width: @tablet-width) {
+    grid-column-start: 3;
+    grid-column-end: -1;
+
+    font-size: 20px;
+    line-height: 20px;
+
+    text-align: right;
+  }
 }
 
 .example__image {
   margin: 0;
   margin-bottom: 23px;
   text-align: center;
+}
+
+.br-hidden {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
+}
+
+.example__handle {
+  @media (min-width: @tablet-width) {
+    margin-top: -50px;
+    margin-bottom: 64px;
+  }
 }

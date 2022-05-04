@@ -1,14 +1,16 @@
 .selection {
-  color: @basic-white;
   margin-bottom: 21px;
-}
 
-.selection__program {
-  min-height: 300px;
-  height: 70vmax;
-  background-image: url("../../img/selection/filter.svg"), url("../../img/selection/background-small.jpg");
-  background-repeat: no-repeat;
-  background-size: 100%;
+  @media (min-width: @tablet-width) {
+    display: grid;
+    color: black;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 21px;
+    margin-bottom: 21px;
+    border-bottom: 21px solid @color-border;
+  }
 }
 
 .selection__title {
@@ -17,24 +19,61 @@
   margin: 0;
   font-size: 36px;
   line-height: 36px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    padding: 0;
+    font-size: 60px;
+    line-height: 60px;
+    font-weight: 400;
+    width: 414px;
+    margin-left: 117px;
+    margin-bottom: 41px;
+    text-align: left;
+  }
 }
 
 .selection__description {
   margin: 0;
+  margin-bottom: 20px;
   padding: 0;
   text-align: center;
   font-size: 14px;
   line-height: 14px;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    text-align: left;
+    margin-left: 117px;
+    font-size: 20px;
+    line-height: 20px;
+    margin-bottom: 50px;
+  }
 }
 
 .selection__image {
-  position: relative;
   text-align: center;
-  margin-bottom: -150px;
-  top: -150px;
-  left: 0;
-  right: 0;
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    width: 720px;
+    height: 694px;
+    background-image: url("../../img/selection/filter.svg"), url("../../img/selection/background-big.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center, 0 -18px;
+  }
+}
+
+.selection__image-bank {
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    top: 120px;
+    left: -180px;
+  }
 }
 
 .selection__button {
@@ -45,4 +84,17 @@
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    width: 200px;
+    margin-left: 117px;
+    padding: 14px;
+    font-size: 20px;
+    line-height: 20px;
+    color: @basic-white;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 216px;
+  }
 }
